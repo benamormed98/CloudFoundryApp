@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock paper and scissors</title>
+  </head>
+  <body>
+    <section class="game">
+      <div class="score">
+        <div class="player-score">
+          <h2>Player</h2>
+          <p>0</p>
+        </div>
+        <div class="computer-score">
+          <h2>Computer</h2>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="intro">
+        <h1>Rock Paper and Scissors</h1>
+        <button>Let's Play</button>
+      </div>
+
+      <div class="match fadeOut">
+        <h2 class="winner">Choose an option</h2>
+        <div class="hands">
+          <img class="player-hand" src="./assets/rock.png" alt="" />
+          <img class="computer-hand" src="./assets/rock.png" alt="" />
+        </div>
+        <div class="options">
+          <button class="rock">rock</button>
+          <button class="paper">paper</button>
+          <button class="scissors">scissors</button>
+        </div>
+      </div>
+    </section>
+    <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "5706bdd2-dfdc-4042-b47c-f0c40e4da8d3", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "750f7cc2-4ed2-4c43-ae4b-79ff39d54e79", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
